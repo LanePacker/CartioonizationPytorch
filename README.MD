@@ -1,14 +1,3 @@
-# White-box-Cartoonization (PyTorch)
-
-Unofficial PyTorch implementation of White-box-Cartoonization. We followed the original Tensorflow training implementation from the paper author ([Xinrui Wang](https://github.com/SystemErrorWang/White-box-Cartoonization)).
-
-**Key difference from Tensorflow implementation:**
-* Its PyTorch.
-* We used PyTorchVGG19 instead of CaffeVGG16 model, which has a different range of input/output and std/mean.
-
-![](https://github.com/SystemErrorWang/White-box-Cartoonization/raw/master/images/method.jpg)
-
-
 
 # Our Results 
 
@@ -71,18 +60,6 @@ python3 image_infer_demo.py -w weights/sceneryonly.pth.tar
 Should start a demo like this:
 <img src = 'https://i.imgur.com/rH7DVhy.png' width = '100%'>
 
-# To start training
-
-0. Read https://vinesmsuic.github.io/i2i-wbcartoonization/ to understand the implementation
-1. Prepare the photo and cartoon data
-2. Get the pre-trained VGG19 weight and put it in the root folder : 
-   https://download.pytorch.org/models/vgg19-dcbb9e9d.pth
-3. Edit `config.py`
-4. Training (if you need to use the parser, type `python train.py -h` to see existing options
-
-```bash
-python train.py
-```
 
 * The training consist of initialization phase and training phase.
 * Wait for a long time and see the results at `results` folder
